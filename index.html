@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Feedback-Formular mit Live-Vorschau und Server-Handling</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <form action="submit.php" method="POST" class="formular" id="formular" novalidate>
+            <h3 class="title">Aufgabe: Feedback-Formular mit Live-Vorschau und Server-Handling</h3>
+
+            <div class="formular__anrede">
+                <div class="button dd-button">Anrede</div>
+                <div class="dd-menu">
+                    <div>Herr</div>
+                    <div>Frau</div>
+                    <div>Divers</div>
+                </div>
+                <input type="hidden" name="anrede" id="anrede-hidden" />
+            </div>
+
+            <div>
+                <label class="formular__label" for="vorname">Vorname</label>
+                <input class="formular__input" type="text" name="vorname" id="vorname" />
+            </div>
+            <div>
+                <label class="formular__label" for="nachname">Nachname</label>
+                <input class="formular__input" type="text" name="nachname" id="nachname" />
+            </div>
+            <div>
+                <label class="formular__label" for="email">E-Mail</label>
+                <input class="formular__input" type="email" name="email" id="email" />
+            </div>
+            <div>
+                <label class="formular__label" for="message">Nachricht</label>
+                <textarea class="formular__input" name="message" id="message" rows="10"></textarea>
+            </div>
+
+            <button type="submit" class="button formular__button">Abschicken</button>
+        </form>
+
+        <div id="preview">
+            <h3>Live-Vorschau:</h3>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
